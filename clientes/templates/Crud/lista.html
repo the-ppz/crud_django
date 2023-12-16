@@ -4,19 +4,19 @@
 {% block contenido %}
     <div class="card">
         <div class="card-header">
-            <a name="btnuevo" id="btnuevo" class="btn btn-primary" href="" role="button">Nuevo Cliente</a>
+            <a name="btnuevo" id="btnuevo" class="btn btn-primary" href="{% url 'clientes_app:crear' %}" role="button">Agregar Cliente</a>
         </div>
         <div class="card-body">
             <h4 class="card-title">Clientes</h4>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th>ID</th>
                         <th>Nombre</th>
-                        <th>Ap</th>
-                        <th>Am</th>                       
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>                       
                         <th>Lenguaje</th>
-                        <th>So</th>
+                        <th>Sistema Operativo</th>
                         <th>Area</th>
                         <th>Foto</th>
                         <th>Acciones</th>
