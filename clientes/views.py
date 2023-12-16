@@ -7,3 +7,6 @@ from django.urls import reverse_lazy, reverse
 # Create your views here.
 class Inicio(TemplateView):
     template_name = 'paginas_base/inicio.html'
+    
+class Nosotros(TemplateView):
+    template_name = 'paginas_base/nosotros.html'
