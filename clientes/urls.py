@@ -10,6 +10,7 @@ urlpatterns = [
     path('nosotros', views.Nosotros.as_view(), name='nosotros'),
     path('lista', views.Lista.as_view(), name='lista'),
     path('clientes/add', views.Crear.as_view(), name='crear'),
-    
+    path('clientes/editar/<pk>', views.Editar.as_view(), name='editar'),
+    path('clientes/eliminar/<pk>', views.Eliminar.as_view(), name='eliminar'),
     
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

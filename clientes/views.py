@@ -25,3 +25,20 @@ class Crear(CreateView):
     
     def get_success_url(self, **kwargs):
         return reverse("clientes_app:lista")
+    
+class Editar(UpdateView):
+    template_name = 'crud/editar.html'
+    model = Cliente
+    form_class = ClientesForm
+    pk_url_kwarg = 'pk'
+    
+    def get_success_url(self, **kwargs):
+        return reverse("clientes_app:lista")
+    
+class Eliminar(DeleteView):
+    template_name = 'crud/eliminar.html'
+    model = Cliente
+    pk_url_kwarg = 'pk'
+    
+    def get_success_url(self, **kwargs):
+        return reverse("clientes_app:lista")

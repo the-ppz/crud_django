@@ -2,6 +2,10 @@
 {% block titulo %}Página Eliminar {% endblock titulo %}
 
 {% block contenido %}
-    
-
+<h1>Eliminar Cliente {{ object.nom }}</h1>
+<form method="post" id="fr_eliminar"> {% csrf_token %}
+    <p>¿Está seguro que desea eliminar?</p>
+    <button type="submit" class="btn btn-danger">Confirmar</button>
+</form> <br>
+<a name="" id="bteleminar" class="btn btn-primary bteliminar" href="{% url 'clientes_app:lista' %}" role="button">Cancelar</a>
 {% endblock contenido %} 
